@@ -146,7 +146,7 @@ class MirrorListener(listeners.MirrorListeners):
                 share_url = f'{INDEX_URL}/{url_path}'
                 if os.path.isdir(f'{DOWNLOAD_DIR}/{self.uid}/{download_dict[self.uid].name()}'):
                     share_url += '/'
-                buttons.buildbutton("💥Index Link💥", share_url)
+                buttons.buildbutton("❄️Index Link❄️", share_url)
             if self.message.from_user.username:
                 uname = f"@{self.message.from_user.username}"
             else:
@@ -223,7 +223,7 @@ def _mirror(bot, update, isTar=False, extract=False):
         LOGGER.info(f'{link}: {e}')
 
     listener = MirrorListener(bot, update, isTar, tag, extract)
-    ariaDlManager.add_download(link, f'{DOWNLOAD_DIR}/{listener.uid}/', listener)
+    ariaDlManager.add_download(link, f'{DOWNLOAD_DIR}/{listener.uid}/',listener)
     sendStatusMessage(update, bot)
     if len(Interval) == 0:
         Interval.append(setInterval(DOWNLOAD_STATUS_UPDATE_INTERVAL, update_all_messages))
