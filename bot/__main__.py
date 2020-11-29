@@ -26,7 +26,8 @@ def stats(update, context):
     cpuUsage = psutil.cpu_percent(interval=0.5)
     memory = psutil.virtual_memory().percent
     disk = psutil.disk_usage('/').percent
-    stats = f'<b>Bot Uptime:</b> {currentTime}\n' \
+    stats = f'<b>🤖Bot Uptime🤖:</b> {currentTime}\n' \
+
             f'<b>Total disk space:</b> {total}\n' \
             f'<b>Used:</b> {used}\n' \
             f'<b>Free:</b> {free}\n' \
@@ -41,9 +42,9 @@ def start(update, context):
     LOGGER.info('UID: {} - UN: {} - MSG: {}'.format(update.message.chat.id,update.message.chat.username,update.message.text))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         if update.message.chat.type == "private" :
-            sendMessage(f"Hey <b>{update.message.chat.first_name}</b>. Welcome to <b>LoaderX Bot</b>", context.bot, update)
+            sendMessage(f"Hey <b>{update.message.chat.first_name}</b>. Welcome to <b>Thunder-Mirror Bot</b>", context.bot, update)
         else :
-            sendMessage("I'm alive :)", context.bot, update)
+            sendMessage("I'm alive mama😁", context.bot, update)
     else :
         sendMessage("Oops! not a authorized user.", context.bot, update)
 
