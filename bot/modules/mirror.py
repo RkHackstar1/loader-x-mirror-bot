@@ -226,7 +226,6 @@ def _mirror(bot, update, isTar=False, extract=False):
 if bot_utils.is_mega_link(link):
             mega_dl = MegaDownloadHelper()
             mega_dl.add_download(link, f'{DOWNLOAD_DIR}/{listener.uid}/', listener)
-            sendStatusMessage(update, bot)
         else:
     ariaDlManager.add_download(link, f'{DOWNLOAD_DIR}/{listener.uid}/',listener)
     sendStatusMessage(update, bot)
