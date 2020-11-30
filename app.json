@@ -1,16 +1,16 @@
 {
-    "name": "python-aria-mirror-bot ",
+    "name": "python-NA14-mirror-bot ",
     "description": "Telegram mirror bot with python",
-    "logo": "https://telegra.ph/file/e15e9ac9c5885b015e3ab.jpg",
+    "logo": "https://telegra.ph/file/a8d474783939f6a59a955.jpg wi",
     "keywords": [
       "telegram",
       "bot",
       "aria",
       "python"
     ],
-    "repository": "https://github.com/Madhavreddy672/MEGASUPPORT_BOT",
-    "website": "https://github.com/Madhavreddy672/MEGASUPPORT_BOT",
-    "success_url": "https://github.com/Madhavreddy672/MEGASUPPORT_BOT/blob/master/README.md",
+    "repository": "https://github.com/Nature-Admirer/LoaderX-Bot",
+    "website": "https://github.com/Nature-Admirer/LoaderX-Bot",
+    "success_url": "https://github.com/Nature-Admirer/LoaderX-Bot/blob/master/README.md",
     "stack": "container",
     "env": {
       "ENV": {
