@@ -86,7 +86,7 @@ python3 generate_drive_token.py
 ```
 
 ## Deploying on Heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/mr-U-I1/AL/tree/master)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/mr-U-I1/AL)
 
 - Run the script to generate token file(token.pickle) for Google Drive:
 ```
