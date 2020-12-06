@@ -1,6 +1,6 @@
 {
-    "name": "python-NA14-mirror-bot ",
-    "description": "Telegram mirror bot with python",
+    "name": "AL",
+    "description": "Telegram Mirror Bot With Python",
     "logo": "https://telegra.ph/file/a8d474783939f6a59a955.jpg wi",
     "keywords": [
       "telegram",
@@ -8,9 +8,9 @@
       "aria",
       "python"
     ],
-    "repository": "https://github.com/Nature-Admirer/LoaderX-Bot",
-    "website": "https://github.com/Nature-Admirer/LoaderX-Bot",
-    "success_url": "https://github.com/Nature-Admirer/LoaderX-Bot/blob/master/README.md",
+    "repository": "https://github.com/mr-U-I1/AL.git",
+    "website": "https://github.com/mr-U-I1/AL/tree/master",
+    "success_url": "https://github.com/mr-U-I1/AL/blob/master/README.md",
     "stack": "container",
     "env": {
       "ENV": {
@@ -95,5 +95,11 @@
         "description": "    Two buttons are already added of Gdrive & index, you can add extra buttons, these are optional.",
         "required": false
       }
-    }
+    },
+    "addons": [
+      {
+        "plan": "heroku-postgresql"
+      }
+    ]
+}
 }
