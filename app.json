@@ -1,16 +1,16 @@
 {
-    "name": "AL",
+    "name": "AllSupport Bot",
     "description": "Telegram Mirror Bot With Python",
-    "logo": "https://telegra.ph/file/a8d474783939f6a59a955.jpg wi",
+    "logo": "https://telegra.ph/file/d7256ded46118fbfd721f.jpg",
     "keywords": [
       "telegram",
       "bot",
       "aria",
       "python"
     ],
-    "repository": "https://github.com/mr-U-I1/AL.git",
-    "website": "https://github.com/mr-U-I1/AL/tree/master",
-    "success_url": "https://github.com/mr-U-I1/AL/blob/master/README.md",
+    "repository": "https://github.com/mr-U-I1/AllSupport.git",
+    "website": "https://github.com/mr-U-I1/AllSupport/tree/master",
+    "success_url": "https://github.com/mr-U-I1/AllSupport/blob/master/README.md",
     "stack": "container",
     "env": {
       "ENV": {
@@ -101,5 +101,4 @@
         "plan": "heroku-postgresql"
       }
     ]
-}
 }
