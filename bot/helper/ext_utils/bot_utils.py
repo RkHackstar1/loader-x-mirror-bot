@@ -13,17 +13,17 @@ URL_REGEX = r"(?:(?:https?|ftp):\/\/)?[\w/\-?=%.]+\.[\w/\-?=%.]+"
 
 
 class MirrorStatus:
-    STATUS_UPLOADING = "Uploading 📤"
-    STATUS_DOWNLOADING = "Downloading 📥"
-    STATUS_WAITING = "Queued 📃"
-    STATUS_FAILED = "Failed 🚫. Cleaning download 🧹"
-    STATUS_CANCELLED = "Cancelled ❎"
-    STATUS_ARCHIVING = "Archiving 🗜"
-    STATUS_EXTRACTING = "Extracting 🗜"
+    STATUS_UPLOADING = "Uᴘʟᴏᴀᴅɪɴɢ...📤"
+    STATUS_DOWNLOADING = "Dᴏᴡɴʟᴏᴀᴅɪɴɢ...📥"
+    STATUS_WAITING = "Qᴜᴇᴜᴇᴅ...🕰️"
+    STATUS_FAILED = "Fᴀɪʟᴇᴅ🚀. Cʟᴇᴀɴɪɴɢ Dᴏᴡɴʟᴏᴀᴅ...🚮"
+    STATUS_CANCELLED = "Cᴀɴᴄᴇʟʟᴇᴅ⚔️"
+    STATUS_ARCHIVING = "Aʀᴄʜɪᴠɪɴɢ...🔐"
+    STATUS_EXTRACTING = "Exᴛʀᴀᴄᴛɪɢ...📂"
 
 
 PROGRESS_MAX_SIZE = 100 // 8
-PROGRESS_INCOMPLETE = ['▏', '▎', '▍', '▌', '▋', '▊', '▉']
+PROGRESS_INCOMPLETE = ['█', '█', '█', '█', '█', '█', '█']
 
 SIZE_UNITS = ['B', 'KB', 'MB', 'GB', 'TB', 'PB']
 
@@ -92,18 +92,18 @@ def get_readable_message():
     with download_dict_lock:
         msg = ""
         for download in list(download_dict.values()):
-            msg += f"<b>FileName :</b> <i>{download.name()}</i> \n\n<b>Status : </b> "
+            msg += f"<b>🍟Fɪʟᴇɴᴀᴍᴇ :</b> <i>{download.name()}</i> \n\n<b>🏂Sᴛᴀᴛᴜs : </b> "
             msg += download.status()
             if download.status() != MirrorStatus.STATUS_ARCHIVING and download.status() != MirrorStatus.STATUS_EXTRACTING:
                 msg += f"\n\n<code>{get_progress_bar_string(download)} {download.progress()}</code>" \
-                       f"\n\n<b>Progress :</b> {get_readable_file_size(download.processed_bytes())}" \
-                       f"\n\n<b>Size :</b> {download.size()}" \
-                       f"\n\n<b>Speed :</b> {download.speed()} <b>| ETA :</b> {download.eta()} "
+                       f"\n\n<b>🛹Pʀᴏɢʀᴇss :</b> {get_readable_file_size(download.processed_bytes())}" \
+                       f"\n\n<b>🍳Sɪᴢᴇ :</b> {download.size()}" \
+                       f"\n\n<b>☄️Sᴘᴇᴇᴅ :</b> {download.speed()} <b>|| ⏳ETA :</b> {download.eta()} "
             if download.status() == MirrorStatus.STATUS_DOWNLOADING:
                 if hasattr(download, 'is_torrent'):
-                    msg += f"\n\n<b>Peer :</b> {download.aria_download().connections} " \
-                           f"<b>| Seed :</b> {download.aria_download().num_seeders}"
-                msg += f"\n\n<b>cancel :</b> <code>/cancel {download.gid()}</code>"
+                    msg += f"\n\n<b>🌭Pᴇᴇʀ :</b> {download.aria_download().connections} " \
+                           f"<b>| 🍱Sᴇᴇᴅ :</b> {download.aria_download().num_seeders}"
+                msg += f"\n\n<b>🚫Cᴀɴᴄᴇʟ :</b> <code>/cancel {download.gid()}</code>"
             msg += "\n\n"
         return msg
 
