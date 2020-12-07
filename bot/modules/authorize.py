@@ -82,7 +82,7 @@ def addSudo(update,context):
             msg = '<b>Aʟʀᴇᴀᴅʏ Sᴜᴅᴏ!</b>'
     else:
         if reply_message is None:
-            msg = "<b>Gɪᴠᴇ ID Oꜰ Usᴇʀ Oʀ Rᴇᴘʟʏ Tᴏ Mᴇssᴀɢᴇ Oꜰ Usᴇʀ Wʜᴏᴍ Yᴏᴜ Wᴀɴᴛ Tᴏ Pʀᴏᴍᴏᴛᴇ</b>""
+            msg = "<b>Gɪᴠᴇ ID Oꜰ Usᴇʀ Oʀ Rᴇᴘʟʏ Tᴏ Mᴇssᴀɢᴇ Oꜰ Usᴇʀ Wʜᴏᴍ Yᴏᴜ Wᴀɴᴛ Tᴏ Pʀᴏᴍᴏᴛᴇ</b>"
         else:
             # Trying to authorize someone in specific
             user_id = reply_message.from_user.id
