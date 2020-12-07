@@ -137,22 +137,22 @@ class MirrorListener(listeners.MirrorListeners):
 
     def onUploadComplete(self, link: str):
         with download_dict_lock:
-            msg = f'<b>Filename : </b><code>{download_dict[self.uid].name()}</code>\n<b>Size : </b><code>{download_dict[self.uid].size()}</code>'
+            msg = f'<b>🍟Fɪʟᴇɴᴀᴍᴇ : </b><code>{download_dict[self.uid].name()}</code>\n<b>🍳Sɪᴢᴇ : </b><code>{download_dict[self.uid].size()}</code>'
             buttons = button_builder.ButtonMaker()
-            buttons.buildbutton("⚡Drive Link⚡", link)
+            buttons.buildbutton("☄️Dʀɪᴠᴇ Lɪɴᴋ☄️", link)
             LOGGER.info(f'Done Uploading {download_dict[self.uid].name()}')
             if INDEX_URL is not None:
                 url_path = requests.utils.quote(f'{download_dict[self.uid].name()}')
                 share_url = f'{INDEX_URL}/{url_path}'
                 if os.path.isdir(f'{DOWNLOAD_DIR}/{self.uid}/{download_dict[self.uid].name()}'):
                     share_url += '/'
-                buttons.buildbutton("💥Index Link💥", share_url)
+                buttons.buildbutton("🌋Iɴᴅᴇx Lɪɴᴋ🌋", share_url)
             if self.message.from_user.username:
                 uname = f"@{self.message.from_user.username}"
             else:
                 uname = f'<a href="tg://user?id={self.message.from_user.id}">{self.message.from_user.first_name}</a>'
             if uname is not None:
-                msg += f'\n\nHey {uname}, your file is uploaded'
+                msg += f'\n\n<b>🗣️Hᴇʏ</b> ⁍{uname}⁌, <b>Yᴏᴜʀ Fɪʟᴇ Is 🪂Mɪʀʀᴏʀᴇᴅ & Uᴘʟᴏᴀᴅᴇᴅ</b>'
             try:
                 fs_utils.clean_download(download_dict[self.uid].path())
             except FileNotFoundError:
@@ -214,7 +214,7 @@ def _mirror(bot, update, isTar=False, extract=False):
     else:
         tag = None
     if not bot_utils.is_url(link) and not bot_utils.is_magnet(link):
-        sendMessage('No download source provided', bot, update)
+        sendMessage('<b>⛽ Pʟᴇᴀsᴇ Pʀᴏᴠɪᴅᴇ ᴀ Dᴏᴡɴʟᴏᴀᴅ Sᴏᴜʀᴄᴇ</b>', bot, update)
         return
 
     try:
