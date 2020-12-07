@@ -65,7 +65,7 @@ class MirrorListener(listeners.MirrorListeners):
                 path = fs_utils.tar(m_path)
             except FileNotFoundError:
                 LOGGER.info('File to archive not found!')
-                self.onUploadError('Internal error occurred!!')
+                self.onUploadError('<b>🛣️Iɴᴛᴇʀɴᴀʟ Eʀʀᴏʀ Oᴄᴄᴜʀʀᴇᴅ!!</b>')
                 return
         elif self.extract:
             download.is_extracting = True
