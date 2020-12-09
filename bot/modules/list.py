@@ -10,7 +10,7 @@ def list_drive(update,context):
     try:
         search = update.message.text.split(' ',maxsplit=1)[1]
     except IndexError:
-        sendMessage('<b>➼Sᴇɴᴅ ᴀ Fɪʟᴇ Nᴀᴍᴇ As Kᴇʏᴡᴏʀᴅ Tᴏ Sᴇᴀʀᴄʜ., Aʟᴏɴɢ Wɪᴛʜ</b> /{BotCommands.ListCommand} <b>Cᴏᴍᴍᴀɴᴅ</b>', context.bot, update)
+        sendMessage('<b>➼Sᴇɴᴅ ᴀ Fɪʟᴇ Nᴀᴍᴇ As Kᴇʏᴡᴏʀᴅ Tᴏ Sᴇᴀʀᴄʜ., Aʟᴏɴɢ Wɪᴛʜ</b> <b>/list</b> <b>Cᴏᴍᴍᴀɴᴅ</b>', context.bot, update)
         return
         
     reply = sendMessage('<b>🔍Sᴇᴀʀᴄʜɪɴɢ...Pʟᴇᴀsᴇ Wᴀɪᴛ!</b>', context.bot, update)
