@@ -19,7 +19,7 @@ class MirrorStatus:
     STATUS_FAILED = "Fᴀɪʟᴇᴅ🚀. Cʟᴇᴀɴɪɴɢ Dᴏᴡɴʟᴏᴀᴅ...🚮"
     STATUS_CANCELLED = "Cᴀɴᴄᴇʟʟᴇᴅ⚔️"
     STATUS_ARCHIVING = "Aʀᴄʜɪᴠɪɴɢ...🔐"
-    STATUS_EXTRACTING = "Exᴛʀᴀᴄᴛɪɢ...📂"
+    STATUS_EXTRACTING = "Exᴛʀᴀᴄᴛɪɴɢ...📂"
 
 
 PROGRESS_MAX_SIZE = 100 // 8
