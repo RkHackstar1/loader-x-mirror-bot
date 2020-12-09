@@ -14,7 +14,7 @@ def _watch(bot: Bot, update: Update, args: list, isTar=False):
     try:
         link = args[0]
     except IndexError:
-        sendMessage(f'<b>/{BotCommands.WatchCommand}  [ʏᴛ_ᴅʟ sᴜᴘᴘᴏʀᴛᴇᴅ ʟɪɴᴋ] ⛽ᴛᴏ ᴍɪʀʀᴏʀ ᴡɪᴛʜ Yᴏᴜʀ ʏᴏᴜᴛᴜʙᴇ_ᴅʟ</b>', bot, update)
+        sendMessage(f'<b>/{BotCommands.WatchCommand} or /{BotCommands.TarWatchCommand}  [ʏᴛ_ᴅʟ sᴜᴘᴘᴏʀᴛᴇᴅ ʟɪɴᴋ] ⛽ᴛᴏ ᴍɪʀʀᴏʀ ᴡɪᴛʜ Yᴏᴜʀ ʏᴏᴜᴛᴜʙᴇ_ᴅʟ</b>', bot, update)
         return
     reply_to = update.message.reply_to_message
     if reply_to is not None:
