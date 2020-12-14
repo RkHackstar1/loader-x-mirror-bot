@@ -455,7 +455,7 @@ class GoogleDriveHelper:
                     content += f'<b> | <a href="https://telegra.ph/{self.path[nxt_page]}">Nᴇxᴛ👉</a></b>'
                     nxt_page += 1
             telegra_ph.edit_page(path = self.path[prev_page],
-                                 title = 'Vɪᴋɪɴɢs Sᴇᴀʀᴄʜ Iɴᴅᴇx',
+                                 title = 'Sᴇᴀʀᴄʜ Iɴᴅᴇx',
                                  html_content=content)
         return
 
@@ -476,7 +476,7 @@ class GoogleDriveHelper:
             content_count = 0
             self.telegraph_content = []
             self.path = []
-            msg += f'<h4>Sᴇᴀʀᴄʜ Rᴇsᴜʟᴛs Fᴏʀ Yᴏᴜʀ Kᴇʏᴡᴏʀᴅ : {fileName}</h4><br>Tᴇʟᴇɢʀᴀᴍ @Mɪʀʀᴏʀʀᴢ #𝐌𝐢𝐫𝐫𝐨𝐫𝐳 🧲⛓️🔗<br><br>'
+            msg += f'<h4>Sᴇᴀʀᴄʜ Rᴇsᴜʟᴛs Fᴏʀ Yᴏᴜʀ Kᴇʏᴡᴏʀᴅ : {fileName}</h4><br>Tᴇʟᴇɢʀᴀᴍ<br><br>'
 
             for file in response.get('files', []):
                 if file.get('mimeType') == "application/vnd.google-apps.folder":  # Detect Whether Current Entity is a Folder or File.
@@ -505,7 +505,7 @@ class GoogleDriveHelper:
                 self.telegraph_content.append(msg)
 
             for content in self.telegraph_content :
-                self.path.append(telegra_ph.create_page(title = 'Vɪᴋɪɴɢs Sᴇᴀʀᴄʜ Iɴᴅᴇx',
+                self.path.append(telegra_ph.create_page(title = 'Sᴇᴀʀᴄʜ Iɴᴅᴇx',
                                                 html_content=content )['path'])
 
             self.num_of_path = len(self.path)      
